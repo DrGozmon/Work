@@ -1,0 +1,20 @@
+9
+11
+6
+13
+8
+15
+7
+5
+9
+7
+Trait0 Marker0 Marker1 Marker2 Marker3 Marker4 Marker5 Marker6 Marker7 Marker8 ENDOFLINE
+Trait1 Marker0 Marker1 Marker2 Marker3 Marker4 Marker5 Marker6 Marker7 Marker8 Marker9 Marker10 ENDOFLINE
+Trait2 Marker0 Marker1 Marker2 Marker3 Marker4 Marker5 ENDOFLINE
+Trait3 Marker0 Marker1 Marker2 Marker3 Marker4 Marker5 Marker6 Marker7 Marker8 Marker9 Marker10 Marker11 Marker12 ENDOFLINE
+Trait4 Marker0 Marker1 Marker2 Marker3 Marker4 Marker5 Marker6 Marker7 ENDOFLINE
+Trait5 Marker0 Marker1 Marker2 Marker3 Marker4 Marker5 Marker6 Marker7 Marker8 Marker9 Marker10 Marker11 Marker12 Marker13 Marker14 ENDOFLINE
+Trait6 Marker0 Marker1 Marker2 Marker3 Marker4 Marker5 Marker6 ENDOFLINE
+Trait7 Marker0 Marker1 Marker2 Marker3 Marker4 ENDOFLINE
+Trait8 Marker0 Marker1 Marker2 Marker3 Marker4 Marker5 Marker6 Marker7 Marker8 ENDOFLINE
+Trait9 Marker0 Marker1 Marker2 Marker3 Marker4 Marker5 Marker6 ENDOFLINE
