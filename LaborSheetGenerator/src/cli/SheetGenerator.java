@@ -415,9 +415,10 @@ public class SheetGenerator {
 			workbook.write( fileOut );
 			fileOut.close();
 			workbook.close();
+			System.out.println( "Labor spreadsheet created successfully at " + filename );
 			System.exit( 0 );
 		} catch (IOException e) {
-			System.out.println( e );
+			System.err.println( "Could not create file. This could be because the file is open in another program or you do not have permission to edit it.");
 			System.exit( 1 );
 		}
 	}
