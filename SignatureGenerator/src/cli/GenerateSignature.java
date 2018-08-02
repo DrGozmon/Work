@@ -19,8 +19,11 @@ public class GenerateSignature {
 	private static boolean keepgoing = false;
 	private static Scanner input;
 	private static boolean first = true;
-
+	
+	private static String[] ashevilleExts = {"701","702","703","704","705","706","707","708","709","710","711","712","713","714","715","716","717","718","719","720","721","722","723","724","725","726","727","728","729","730","731","732","733","734","735","736","753","755","772","799"};
+	private static String[] ashevilleDIDs = {"(828) 575-9375","(828) 575-9376","(828) 575-9612","(828) 575-9613","(828) 575-9618","(828) 575-9619","(828) 575-9666","(828) 575-9667","(828) 232-6109","(828) 575-9670","(828) 575-9671","(828) 575-9673","(828) 232-6113","(828) 575-9674","(828) 232-6115","(828) 575-9691","(828) 575-9692","(828) 575-9728","(828) 575-9729","(828) 232-6120","(828) 575-9731","(828) 575-9732","(828) 575-9737","(828) 575-9738","(828) 575-9751","(828) 575-9752","(828) 575-9756","(828) 575-9757","(828) 575-9758","(828) 575-9763","(828) 575-9764","(828) 575-9775","(828) 232-6133","(828) 575-9776","(828) 575-9821","(828) 575-9822","(828) 232-6153","(828) 232-6155","(828) 232-6172","(828) 255-0313"};
 	public static void main(String[] args) {
+		
 		do {
 			Scanner in = new Scanner( System.in );
 
@@ -40,11 +43,11 @@ public class GenerateSignature {
 					System.out.print( "Email*: ");
 					name = in.nextLine();
 				}
-				System.out.print( "Location (c/g/p/r/w)*: ");
+				System.out.print( "Location (a/c/g/p/r/w)*: ");
 				location = in.nextLine().toLowerCase().charAt( 0 );
-				while ( location != 'c' && location != 'g' && location != 'p' && location != 'r' && location != 'w' ) {
+				while ( location != 'a' && location != 'c' && location != 'g' && location != 'p' && location != 'r' && location != 'w' ) {
 					System.out.println( "Location is required" );
-					System.out.print( "Location (c/g/p/r/w)*: ");
+					System.out.print( "Location (a/c/g/p/r/w)*: ");
 					location = in.nextLine().toLowerCase().charAt( 0 );
 				}
 				System.out.print( "Title: ");
@@ -101,6 +104,15 @@ public class GenerateSignature {
 				case '5':
 					direct = "910.509.6" + ext;
 					break;
+				case '7':
+					for ( int i = 0; i < ashevilleExts.length; i++ ) {
+						if ( ext.equals( ashevilleExts[ i ] ) ) {
+							direct = ashevilleDIDs[ i ];
+						}
+					}
+					break;
+				default:
+					direct = "";
 				}
 			}
 			switch ( location ) {
@@ -110,7 +122,7 @@ public class GenerateSignature {
 				break;
 			case 'g':
 				office = "336.605.3009";
-				address = "7011 Albert Pick Rd. Suite G <b><font size=\"1\" color=\"#7AAB65\"> &thinsp; | &thinsp; </font></b>Greensboro, NC 27409<br>";
+				address = "424 Gallimore Dairy Road, Suite C <b><font size=\"1\" color=\"#7AAB65\"> &thinsp; | &thinsp; </font></b>Greensboro, NC 27409<br>";
 				break;
 			case 'p':
 				office = "919.469.3340";
@@ -122,8 +134,15 @@ public class GenerateSignature {
 				break;
 			case 'w':
 				office = "910.256.9277";
-				address = "1410 Commonwealth Drive, Suite 101 <b><font size=\"1\" color=\"#7AAB65\">  &thinsp; | &thinsp; </font></b> Wilmington, NC 28403 <br>";
+				address = "219 Station Road, Suite 101 <b><font size=\"1\" color=\"#7AAB65\">  &thinsp; | &thinsp; </font></b> Wilmington, NC 28405 <br>";
 				break;
+			case 'a':
+				office = "828.255.0313";
+				address = "84 Coxe Avenue, Suite 260 <b><font size=\"1\" color=\"#7AAB65\">  &thinsp; | &thinsp; </font></b> Asheville, NC 28801  <br>";
+				break;
+			default:
+				office = "919.469.3340";
+				address = "115 MacKenan Drive <b><font size=\"1\" color=\"#7AAB65\">  &thinsp; | &thinsp; </font></b> Cary, NC 27511 <br>";
 			}
 
 			try {
